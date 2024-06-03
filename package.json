@@ -1,0 +1,49 @@
+{
+  "name": "warme-y2k",
+  "description": "HTML5 Game Engine 2D & 3D written in TypeScript",
+  "homepage": "https://warme-engine.com",
+  "keywords": [
+    "game-engine-2d",
+    "game-engine-3d",
+    "webgpu"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jay19240/WARME-Y2K.git"
+  },
+  "email": "aliyah.raijin@gmail.com",
+  "author": "Julien Rongiere",
+  "license": "MIT",
+  "version": "1.2.4",
+  "type": "module",
+  "main": "src/lib/index.ts",
+  "files": [
+    "src/lib/*"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "doc": "typedoc --entryPointStrategy Expand src/lib/ --json docs/doc.json --out docs/html --exclude \"quaternion.ts\"",
+    "pukiwiki": "python3 bin/converter-typedoc-to-pukiwiki.py --json docs/doc.json --output docs/pukiwiki"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "@vitejs/plugin-basic-ssl": "^1.0.2",
+    "typedoc": "^0.25.1",
+    "typedoc-plugin-markdown": "^3.16.0",
+    "typescript": "^4.6.4",
+    "vite": "^4.5.0"
+  },
+  "dependencies": {
+    "@dimforge/rapier2d": "*",
+    "@dimforge/rapier3d": "*",
+    "@webgpu/types": "^0.1.21",
+    "curve-interpolator": "^3.3.1",
+    "dotenv": "^16.4.5",
+    "unplugin-preprocessor-directives": "^1.0.3",
+    "vite-plugin-top-level-await": "^1.4.1",
+    "vite-plugin-wasm": "^3.3.0",
+    "warme-y2k": "^1.2.4"
+  }
+}
