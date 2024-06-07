@@ -3,12 +3,9 @@
     "typeRoots": [
       "./node_modules/@webgpu/types",
       "./node_modules/@types",
-      "./src/lib/core"
+      "./node_modules/warme-y2k"
     ],
     "baseUrl": ".",
-    "paths": {
-      "@lib/*": ["src/lib/*"]
-    },
     "target": "ESNext",
     "useDefineForClassFields": true,
     "module": "ESNext",

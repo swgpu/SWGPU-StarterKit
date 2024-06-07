@@ -17,6 +17,8 @@ import { GameScreen } from './game_screen';
 // ---------------------------------------------------------------------------------------
 
 class GameManager {
+  then: number;
+
   constructor() {
     this.then = 0;
   }
@@ -27,7 +29,7 @@ class GameManager {
     this.run(0);
   }
 
-  run(timeStamp) {
+  run(timeStamp: number) {
     const ts = timeStamp - this.then;
     this.then = timeStamp;
 
@@ -51,16 +53,16 @@ class GameManager {
     gfx3Manager.beginPassRender(0);
     gfx3SkyboxRenderer.render();
     gfx3DebugRenderer.render();
-    gfx3MeshRenderer.render();
+    gfx3MeshRenderer.render(ts);
     gfx3SpriteRenderer.render();
     gfx3ParticlesRenderer.render();
     gfx3FlareRenderer.render();
     gfx3Manager.endPassRender();
-    gfx3PPERenderer.render(gfx3Manager.getCurrentRenderingTexture());
+    gfx3PPERenderer.render(ts, gfx3Manager.getCurrentRenderingTexture());
     gfx3Manager.endRender();
 
-    document.getElementById('fps').textContent = (1000 / ts).toFixed(2);
-    document.getElementById('rt').textContent = (1000 / gfx3Manager.getLastRenderTime()).toFixed(2);
+    document.getElementById('fps')!.textContent = (1000 / ts).toFixed(2);
+    document.getElementById('rt')!.textContent = (1000 / gfx3Manager.getLastRenderTime()).toFixed(2);
 
     requestAnimationFrame(timeStamp => this.run(timeStamp));
   }

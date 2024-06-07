@@ -5,6 +5,8 @@ import { UIMenuText } from 'warme-y2k';
 // ---------------------------------------------------------------------------------------
 
 class GameScreen extends Screen {
+  uiMenu: UIMenuText;
+
   constructor() {
     super();
     this.uiMenu = new UIMenuText({ className: 'UIMenuText' });
@@ -22,7 +24,7 @@ class GameScreen extends Screen {
     uiManager.removeWidget(this.uiMenu);
   }
 
-  handleMenuItemSelected(data) {
+  handleMenuItemSelected() {
     alert('Life is a journey not a destination. Enjoy !');
   }
 }
