@@ -65,7 +65,6 @@ body {
 
 #APP {
   position: relative;
-  top: 20px;
   overflow: hidden;
   width: 600px;
   height: 600px;
@@ -74,7 +73,6 @@ body {
   transform-origin: top left;
   user-select: none;
   box-sizing: content-box;
-  border: 20px solid #00abff73;
 }
 
 #APP.scanlines::before {
