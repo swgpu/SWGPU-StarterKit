@@ -10,7 +10,7 @@ import { gfx3ParticlesRenderer } from 'warme-y2k';
 import { gfx2Manager } from 'warme-y2k';
 import { screenManager } from 'warme-y2k';
 import { uiManager } from 'warme-y2k';
-import { gfx3PPERenderer } from 'warme-y2k';
+import { gfx3PostRenderer } from 'warme-y2k';
 import { gfx3ShadowVolumeRenderer } from 'warme-y2k';
 // ---------------------------------------------------------------------------------------
 import { GameScreen } from './game_screen';
@@ -49,7 +49,7 @@ class GameManager {
     gfx3Manager.beginRender();
     gfx3MeshShadowRenderer.render();
     gfx3ShadowVolumeRenderer.render();
-    gfx3Manager.setDestinationTexture(gfx3PPERenderer.getSourceTexture());
+    gfx3Manager.setDestinationTexture(gfx3PostRenderer.getSourceTexture());
     gfx3Manager.beginPassRender(0);
     gfx3SkyboxRenderer.render();
     gfx3DebugRenderer.render();
@@ -58,7 +58,7 @@ class GameManager {
     gfx3ParticlesRenderer.render();
     gfx3FlareRenderer.render();
     gfx3Manager.endPassRender();
-    gfx3PPERenderer.render(ts, gfx3Manager.getCurrentRenderingTexture());
+    gfx3PostRenderer.render(ts, gfx3Manager.getCurrentRenderingTexture());
     gfx3Manager.endRender();
 
     document.getElementById('fps')!.textContent = (1000 / ts).toFixed(2);
