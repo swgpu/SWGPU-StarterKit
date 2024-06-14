@@ -1,3 +1,5 @@
+import Alpine from 'alpinejs'
+// ---------------------------------------------------------------------------------------
 import { coreManager } from 'warme-y2k';
 import { gfx3Manager } from 'warme-y2k';
 import { gfx3DebugRenderer } from 'warme-y2k';
@@ -21,6 +23,7 @@ class GameManager {
 
   constructor() {
     this.then = 0;
+    Alpine.start();
   }
 
   async startup() {
