@@ -7,7 +7,7 @@
 </p>
 
 > [!NOTE]
-> This project is finally stable, with only minor future changes expected.
+> This project is finally stable, only minor changes in the futur.
 
 ![Langage](https://img.shields.io/badge/Langage-Typescript-f39f37)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
