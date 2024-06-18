@@ -9,6 +9,7 @@ class UITest extends UIWidget {
       className: 'UITest',
       template: `
       <div x-data="UITest">
+        <span>This is a user-interface test</span>
         <button x-on:click="toggle">Toggle</button>
         <template x-if="open">
           <div>Contents...</div>
