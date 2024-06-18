@@ -14,9 +14,7 @@
 ![Compatibility](https://img.shields.io/badge/Compatibility-All%20Platforms-lightgrey)
 
 **WarmeY2K** is a fully free **2D/3D** game engine dedicated to **indie games** !      
-It provide an easy way to build web based "old-school" games like the **PS1/PS2/XBOX** era in a modern **Typescript & HTML5, CSS3** environement.     
-The core engine is freely available as a [npm package](https://www.npmjs.com/package/warme-y2k) or starter-kit.     
-You can also have full access to the [documentation](http://warme-engine.com/).
+It provide an easy way to build web based "old-school" games like the **PS1/PS2/XBOX** era in a modern **Typescript & HTML5, CSS3** environement. The core engine is freely available as a [npm package](https://www.npmjs.com/package/warme-y2k) or starter-kit. You can also have full access to the [documentation](http://warme-engine.com/).
 
 Some words about our philosophy:
 - **Robustness:** We used only simple and efficient methods coming from the industrie for nearly two decades.     
