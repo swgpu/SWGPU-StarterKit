@@ -1,18 +1,24 @@
-import { gfx2TextureManager } from 'warme-y2k';
+import { gfx2TextureManager, uiManager } from 'warme-y2k';
 import { Gfx2SpriteJSS, Tween, Screen, UT } from 'warme-y2k';
+// ---------------------------------------------------------------------------------------
+import { UITest } from './ui_test';
 // ---------------------------------------------------------------------------------------
 
 class GameScreen extends Screen {
+  uiTest: UITest;
   logo: Gfx2SpriteJSS;
   animation: Tween<vec2>;
 
   constructor() {
     super();
+    this.uiTest = new UITest();
     this.logo = new Gfx2SpriteJSS();
     this.animation = new Tween<vec2>();
   }
 
   async onEnter() {
+    uiManager.addWidget(this.uiTest, 'position:absolute; top:20px; left:50%; transform:translate(-50%,-50%);');
+
     this.logo.setTexture(await gfx2TextureManager.loadTexture('./textures/logo.png'));
     this.logo.setOffsetNormalized(0.5, 0.5);
 
