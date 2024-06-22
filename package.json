@@ -31,6 +31,6 @@
     "unplugin-preprocessor-directives": "^1.0.3",
     "vite-plugin-top-level-await": "^1.4.1",
     "vite-plugin-wasm": "^3.3.0",
-    "warme-y2k": "^1.4.11"
+    "warme-y2k": "^1.4.12"
   }
 }
