@@ -7,7 +7,7 @@
 </p>
 
 > [!NOTE]
-> This project is finally stable, only minor changes in the future.
+> This project is finally stable, only minor changes in the futur.
 
 ![Langage](https://img.shields.io/badge/Langage-Typescript-f39f37)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
@@ -194,6 +194,15 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 ## Changelog
 ```
+- [Ver. 1.5.3]  Pack archivage added.
+- [Ver. 1.5.0]  New mesh shader hook added.
+- [Ver. 1.5.0]  Engine manager added.
+- [Ver. 1.5.0]  ECS Components check optimized with the use of Set.
+- [Ver. 1.5.0]  ECS query is added.
+- [Ver. 1.5.0]  ECS nice sugar methods is added.
+- [Ver. 1.5.0]  Fix offset factor on all sprite classes.
+- [Ver. 1.5.0]  Tile collision method added to Gfx2TileMap.
+- [Ver. 1.5.0]  Platformer template added.
 - [Ver. 1.2.0]  Binary format for 3D files added.
 - [Ver. 1.1.14] Tilemap SpriteFusion format added.
 - [Ver. 1.1.13] Cylinder collision class added.
@@ -210,6 +219,21 @@ If you have a suggestion that would make this better, please fork the repo and c
 - [Ver. 1.0.3]  Post-processing effects has been added.
 - [Ver. 1.0.3]  Camera WASD has been added.
 - [Ver. 1.0.3]  Camera orbit has been added.
+```
+
+## Roadmap
+```
+Importation:
+- Replace SpriteFusion import by Tilekit (https://rxi.itch.io/tilekit). [Black]
+- Add AseSprite import. [Black]
+- Add Spritemancer import (https://codemanu.itch.io/spritemancer). [Black]
+- Add export MAT on Blender addon. [Me]
+- Add export pack on Blender addon (export tous les objets présent dans les catégories valides (jam, jsm, jwm, etc...) [Me]
+
+Extra:
+- Add fake light volume: https://github.com/marmitoTH/godot-fake-volumetric-light/tree/master.
+- Add pooling soundManager.
+- Test light on toon shader.
 ```
 
 ## License 
