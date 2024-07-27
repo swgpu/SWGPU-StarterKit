@@ -1,11 +1,13 @@
 import Alpine from 'alpinejs'
-// ---------------------------------------------------------------------------------------
-import { engineManager } from 'warme-y2k';
+import { em } from 'warme-y2k';
 import { screenManager } from 'warme-y2k';
 // ---------------------------------------------------------------------------------------
+import { DebugScreen } from './debug_screen';
 import { GameScreen } from './game_screen';
 // ---------------------------------------------------------------------------------------
 
 Alpine.start();
-engineManager.startup();
-screenManager.requestSetScreen(new GameScreen());
+em.startup();
+
+screenManager.requestSetScreen(new DebugScreen());
+// screenManager.requestSetScreen(new GameScreen());
