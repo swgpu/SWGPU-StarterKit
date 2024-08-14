@@ -1,38 +1,51 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/jay19240/jay19240.github.io/main/others/banner-brand-mini.png" alt="logo"/>
+    <img src="https://raw.githubusercontent.com/jay19240/jay19240.github.io/main/others/swgpu.png" width="450px" alt="logo"/>
 </p>
 
 <p align="center">
-    <a href="https://warme-engine.com/">Documentation</a> - <a href="https://demo.warme-engine.com/">Demos</a> - <a href="https://warme-engine.com/?Screenshots">Screenshots</a> - <a href="https://discord.gg/9PcFvg5f7P">Join our discord !</a>
+    <a href="https://warme-engine.com/">Documentation</a> - <a href="https://jay19240.github.io/">Demos</a> - <a href="https://warme-engine.com/?Screenshots">Screenshots</a> - <a href="https://discord.gg/9PcFvg5f7P">Join our discord !</a>
 </p>
-
-> [!NOTE]
-> This project is finally stable, only minor changes in the futur.
 
 ![Langage](https://img.shields.io/badge/Langage-Typescript-f39f37)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 ![Compatibility](https://img.shields.io/badge/Compatibility-All%20Platforms-lightgrey)
 
-**WarmeY2K** is a fully free **2D/3D** game engine dedicated to **indie games** !      
-It provide an easy way to build web based "old-school" games like the **PS1/PS2/XBOX** era in a modern **Typescript & HTML5, CSS3** environement. The core engine is freely available as a [npm package](https://www.npmjs.com/package/warme-y2k) or starter-kit. You can also have full access to the [documentation](http://warme-engine.com/).
-
-Some words about our philosophy:
-- **Robustness:** We used only simple and efficient methods coming from the industrie for nearly two decades.     
-- **Flexibility:** Create your own renderers. Handle render and update loops in a state-less way.    
-- **Modularity:** We used modular architecture to keep things simple and separate.     
-- **Performance:** We used WebGPU API for a blazing fast rendering.
-- **Lightweight:** The lib minzipped size is just 73 kB (1Mb with Rapier2D & Rapier3D).
-
-For a more concret overview on it, you can play [examples](http://demo.warme-engine.com/).
+**SWGPU** is a simple **2D/3D game library** written in **TypeScript** and powered by the latest web APIs.
+It offers an easy and complete way to create classic games in a non-opinionated but recommanded coding style.
+From the start, we chose to embrace the future with pure **WebGPU** 3D rendering engine as the name suggests. Check what stack we've choices for this work:
+| API       | Domain     | Description                                                                                                                |
+|:---------:|:----------:|:---------------------------------------------------------------------------------------------------------------------------|
+| WebGPU    | 3D         | A modern 3D graphics API designed to provide high-performance rendering and compute capabilities directly in web browsers. |
+| Canvas2D  | 2D         | A 2D graphics API designed to provide shapes, text, and images drawing.                                                    |
+| CSS3      | UI         | The best way to build powerful and hightly maintenable user-interface.                                                     |
+| Web Audio | Sound      | An Audio API for playing sounds.                                                                                           |
+| Rapier3D  | 3D Physics | The fastest 3D physics engine for the web.                                                                                 |
+| Rapier2D  | 2D Physics | The fastest 2D physics engine for the web.                                                                                 |
 
 ## Table of content
-
+* [Getting started](#getting-started)
+* [Compatible tools](#compatible-tools)
 * [Features](#features)
-* [Contributions](#contributions)
+* [Examples](#examples)
 * [Contributors](#contributors)
 * [Some parts taken for this work](#some-parts-taken-for-this-work)
 * [Changelog](#changelog)
-* [Roadmap](#roadmap)
+
+## Getting started
+Clone and install the starter-kit from this repository:      
+```
+# git clone https://github.com/jay19240/SWGPU-StarterKit.git
+# cd SWGPU-StarterKit
+# npm install
+# npm run dev
+```
+Edit the ''src/game_screen'' and start writing your game.
+Go to http://localhost:5173.
+
+## Compatible tools
+| Aseprite                                                                                              | Tilekit | Blender |
+|:-----------------------------------------------------------------------------------------------------:|:-------:|:--------|
+| ![](https://raw.githubusercontent.com/jay19240/jay19240.github.io/main/others/tools-0.png "Aseprite") | ![](https://raw.githubusercontent.com/jay19240/jay19240.github.io/main/others/tools-1.png "Tilekit") | ![](https://raw.githubusercontent.com/jay19240/jay19240.github.io/main/others/tools-2.png "Blender") |
 
 ## Features
 - 🧱 **Core**
@@ -45,15 +58,16 @@ For a more concret overview on it, you can play [examples](http://demo.warme-eng
     
 - 👾 **2D**
     - Static sprite (jss)
-    - Animated sprite (jas)
-    - Isometric tilemap (jtm)
-    - Orthographic tilemap (jtm)
+    - Animated sprite (jas, aseprite)
+    - Isometric animated tilemap (jtm, tilekit)
+    - Orthographic animated tilemap (jtm)
     - Particles
     - Rendering filters
     - Motion lines (jlm)
 
 - 📐 **2D Physics**
     - BoundingRect
+    - Tilemap box collider
     - Rapier2D
 
 - 🧊 **3D**
@@ -62,7 +76,7 @@ For a more concret overview on it, you can play [examples](http://demo.warme-eng
     - Static mesh (jsm and obj)
     - Animated mesh (jam)
     - Static sprite (jss)
-    - Animated sprite (jas)
+    - Animated sprite (jas, aseprite)
     - Motion lines (jlm)
     - Billboarding
     - Cubemap skybox
@@ -79,7 +93,7 @@ For a more concret overview on it, you can play [examples](http://demo.warme-eng
     - Auto mipmap
     - Post rendering (gbuffers: depth/normal/ids)
     - Rendering filters
-    - Shader customizable
+    - Customizable shaders
  
 - 📐 **3D Physics**
     - BoundingBox
@@ -104,6 +118,7 @@ For a more concret overview on it, you can play [examples](http://demo.warme-eng
     - Specular shininess
     - Emissive intensity
     - Normal intensity
+    - Facing blending
 
 - 🌞 **3D Light**
     - Directional light
@@ -165,16 +180,39 @@ For a more concret overview on it, you can play [examples](http://demo.warme-eng
 - 🌆 **DNA**
     - ECS architecture implementation
 
-## Contributions
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+## Examples
+This framework come with 16 common game templates and 9 utils templates.     
+Each one is thinking to represent a common game style like platformer, fighting, fps or rpg.     
+Template are written in typescript/javascript and build to be clean and extensible.
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement". Don't forget to give the project a star! Thanks again!    
+List of templates that you can test [here](https://jay19240.github.io/):
+- 3D Pre-rendered
+- 3D Isometric
+- 2D Visual Novel
+- 2D Tilemap
+- 2D Tilemap (with pathfinding)
+- 2D Checker (extendable)
+- 2D Trading Carding Game
+- 3D FPS
+- 3D Turn-based RPG
+- 2D Fight
+- 2D Triple Triad
+- 2D Tilemap Isometric
+- 2D Background Isometric
+- 2D Shoot'em up
+- 3D Third Person Camera
+- 2D Platformer
 
-1. Fork the Project
-2. Create your Feature Branch (git checkout -b new_feature)
-3. Commit your Changes (git commit -m 'Add new feature')
-4. Push to the Branch (git push origin new_feature)
-5. Open a Pull Request
+List of examples:
+- 3D Curve
+- 3D Particles
+- 3D Performance Test
+- 3D Rapier
+- 3D Shadow Map
+- UI Menu
+- 3D Viewer
+- 3D Menu Ring
+- 3D Pack
 
 ## Contributors
 1. Crisxzu - Contribute to the Wiki, typedoc converter and Triple Triad demo.
@@ -189,12 +227,12 @@ If you have a suggestion that would make this better, please fork the repo and c
 - CanvasRenderingContext2D for 2D stuffs
 - [Rapier](https://rapier.rs/) for both 2D and 3D physics engine
 - No glTF support, we don't want to support the rendering techniques used by this format (BSDF, Skinning, etc...)
-- Compatible Blender for 3D with our addon
-- Compatible SpriteFusion for 2D
 
 ## Changelog
 ```
-- [Ver. 1.5.3]  Pack archivage added.
+- [Ver. 1.6.0] Aseprite support added.
+- [Ver. 1.6.0] Tilekit support added.
+- [Ver. 1.5.0]  Pack archivage added.
 - [Ver. 1.5.0]  New mesh shader hook added.
 - [Ver. 1.5.0]  Engine manager added.
 - [Ver. 1.5.0]  ECS Components check optimized with the use of Set.
@@ -221,20 +259,5 @@ If you have a suggestion that would make this better, please fork the repo and c
 - [Ver. 1.0.3]  Camera orbit has been added.
 ```
 
-## Roadmap
-```
-Importation:
-- Replace SpriteFusion import by Tilekit (https://rxi.itch.io/tilekit). [Black]
-- Add AseSprite import. [Black]
-- Add Spritemancer import (https://codemanu.itch.io/spritemancer). [Black]
-- Add export MAT on Blender addon. [Me]
-- Add export pack on Blender addon (export tous les objets présent dans les catégories valides (jam, jsm, jwm, etc...) [Me]
-
-Extra:
-- Add fake light volume: https://github.com/marmitoTH/godot-fake-volumetric-light/tree/master.
-- Add pooling soundManager.
-- Test light on toon shader.
-```
-
 ## License 
-WARME Y2K is released under the [MIT](https://opensource.org/licenses/MIT) license. 
+SWGPU is released under the [MIT](https://opensource.org/licenses/MIT) license. 

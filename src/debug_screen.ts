@@ -1,9 +1,9 @@
-import { em, Pack3D } from 'warme-y2k';
-import { gfx3DebugRenderer } from 'warme-y2k';
-import { gfx3MeshRenderer } from 'warme-y2k';
-import { UT } from 'warme-y2k';
-import { Screen } from 'warme-y2k';
-import { Gfx3CameraWASD } from 'warme-y2k';
+import { em, Pack3D } from 'swgpu';
+import { gfx3DebugRenderer } from 'swgpu';
+import { gfx3MeshRenderer } from 'swgpu';
+import { UT } from 'swgpu';
+import { Screen } from 'swgpu';
+import { Gfx3CameraWASD } from 'swgpu';
 // ---------------------------------------------------------------------------------------
 
 class DebugScreen extends Screen {
@@ -18,7 +18,7 @@ class DebugScreen extends Screen {
 
   async onEnter() {
     this.camera.setPosition(0, 0, 10);
-    this.pack = await em.loadPack3D('./scene.blend.zip');
+    this.pack = await em.loadPack3D('./scene.blend.pak');
 
     const cameraPosition = localStorage.getItem('cameraPosition');
     if (cameraPosition) {

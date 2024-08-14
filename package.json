@@ -1,15 +1,12 @@
 {
-  "name": "warme-y2k-starter-kit",
-  "description": "WarmeY2K Starter-Kit",
+  "name": "swgpu-starter-kit",
+  "description": "SWGPU Starter-Kit",
   "homepage": "https://warme-engine.com",
   "keywords": [
     "game-engine-2d",
     "game-engine-3d",
     "webgpu"
   ],
-  "email": "aliyah.raijin@gmail.com",
-  "author": "Julien Rongiere",
-  "license": "MIT",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
@@ -32,6 +29,6 @@
     "unplugin-preprocessor-directives": "^1.0.3",
     "vite-plugin-top-level-await": "^1.4.1",
     "vite-plugin-wasm": "^3.3.0",
-    "warme-y2k": "^1.6.2"
+    "swgpu": "^1.6.4"
   }
 }

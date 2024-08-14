@@ -1,13 +1,19 @@
-import Alpine from 'alpinejs'
-import { em } from 'warme-y2k';
-import { screenManager } from 'warme-y2k';
+import { em } from 'swgpu';
+import { screenManager, uiManager } from 'swgpu';
 // ---------------------------------------------------------------------------------------
 import { DebugScreen } from './debug_screen';
 import { GameScreen } from './game_screen';
+import { UIDebug } from './ui/ui_debug';
 // ---------------------------------------------------------------------------------------
 
-Alpine.start();
 em.startup();
 
-screenManager.requestSetScreen(new DebugScreen());
-// screenManager.requestSetScreen(new GameScreen());
+const uiDebug = new UIDebug();
+uiManager.addWidget(uiDebug, 'position:absolute; top:10px; left:10px;');
+
+if (localStorage.getItem('debugEnabled') == '1') {
+  screenManager.requestSetScreen(new DebugScreen());
+}
+else {
+  screenManager.requestSetScreen(new GameScreen());
+}

@@ -3,7 +3,7 @@
     "typeRoots": [
       "./node_modules/@webgpu/types",
       "./node_modules/@types",
-      "./node_modules/warme-y2k/lib/core"
+      "./node_modules/swgpu/lib/core"
     ],
     "baseUrl": ".",
     "target": "ESNext",
