@@ -1,24 +1,24 @@
-import { em, Pack3D } from 'swgpu';
 import { gfx3DebugRenderer } from 'swgpu';
 import { gfx3MeshRenderer } from 'swgpu';
 import { UT } from 'swgpu';
+import { EnginePack3D } from 'swgpu';
 import { Screen } from 'swgpu';
 import { Gfx3CameraWASD } from 'swgpu';
 // ---------------------------------------------------------------------------------------
 
 class DebugScreen extends Screen {
   camera: Gfx3CameraWASD;
-  pack: Pack3D;
+  pack: EnginePack3D;
 
   constructor() {
     super();
     this.camera = new Gfx3CameraWASD(0);
-    this.pack = new Pack3D();
+    this.pack = new EnginePack3D();
   }
 
   async onEnter() {
     this.camera.setPosition(0, 0, 10);
-    this.pack = await em.loadPack3D('./scene.blend.pak');
+    this.pack = await EnginePack3D.createFromFile('./scene.blend.pak');
 
     const cameraPosition = localStorage.getItem('cameraPosition');
     if (cameraPosition) {
