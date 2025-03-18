@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "alpinejs": "^3.14.0",
-    "swgpu": "^1.6.12",
+    "swgpu": "^1.6.13",
     "unplugin-preprocessor-directives": "^1.0.3",
     "vite-plugin-top-level-await": "^1.4.1",
     "vite-plugin-wasm": "^3.3.0"
