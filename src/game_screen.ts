@@ -1,5 +1,11 @@
-import { gfx2TextureManager } from 'swgpu';
-import { Gfx2SpriteJSS, Tween, Screen, UT } from 'swgpu';
+import {
+  gfx2TextureManager,
+  Gfx2SpriteJSS,
+  Tween,
+  Screen,
+  UT,
+  vec2
+} from 'swgpu';
 // ---------------------------------------------------------------------------------------
 
 class GameScreen extends Screen {

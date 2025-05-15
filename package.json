@@ -1,7 +1,7 @@
 {
   "name": "swgpu-starter-kit",
   "description": "SWGPU Starter-Kit",
-  "homepage": "https://warme-engine.com",
+  "homepage": "",
   "keywords": [
     "game-engine-2d",
     "game-engine-3d",
@@ -11,16 +11,12 @@
   "type": "module",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@types/alpinejs": "^3.13.10",
     "@types/node": "^20.12.12",
-    "@vitejs/plugin-basic-ssl": "^1.0.2",
-    "electron": "^33.2.1",
     "typedoc": "^0.25.1",
     "typedoc-plugin-markdown": "^3.16.0",
     "typescript": "^4.6.4",
@@ -28,10 +24,7 @@
     "vite-plugin-full-reload": "^1.2.0"
   },
   "dependencies": {
-    "alpinejs": "^3.14.0",
-    "swgpu": "^1.7.0",
-    "unplugin-preprocessor-directives": "^1.0.3",
-    "vite-plugin-top-level-await": "^1.4.1",
-    "vite-plugin-wasm": "^3.3.0"
+    "swgpu": "^1.8.4",
+    "vite-plugin-top-level-await": "^1.4.1"
   }
 }

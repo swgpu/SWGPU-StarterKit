@@ -1,4 +1,5 @@
 import { UIWidget } from 'swgpu';
+// ---------------------------------------------------------------------------------------
 
 class UIDebug extends UIWidget {
   constructor() {

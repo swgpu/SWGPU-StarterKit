@@ -1,10 +1,10 @@
-import wasm from 'vite-plugin-wasm';
 import FullReload from 'vite-plugin-full-reload';
+import topLevelAwait from 'vite-plugin-top-level-await';
 
 export default {
   plugins: [
-		wasm(),
-    FullReload(['public/**'])
+    FullReload(['public/**']),
+    topLevelAwait()
   ],
 	build: {
     target: 'esnext',
