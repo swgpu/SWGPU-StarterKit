@@ -24,7 +24,7 @@
     "vite-plugin-full-reload": "^1.2.0"
   },
   "dependencies": {
-    "swgpu": "^1.8.4",
+    "swgpu": "^1.8.5",
     "vite-plugin-top-level-await": "^1.4.1"
   }
 }
